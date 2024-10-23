@@ -4,7 +4,10 @@ import { ConsoleTransportInstance, FileTransportInstance } from 'winston/lib/win
 import config from '../config/config'
 import { EApplicationEnviroment } from '../constant/application'
 import path from 'path'
+import * as sourceMapSupport from 'source-map-support'
 
+// Linking Trace Support
+sourceMapSupport.install()
 const consoleLogFormat = format.printf((info)=>{
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const {level , message, timestamp, meta = {}} = info
