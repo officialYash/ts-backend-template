@@ -9,5 +9,5 @@ PORT:process.env.PORT,
 SERVER_URL:process.env.SERVER_URL,
 
 // database
-DATABASE_URL : process.env.DATABSE_URL
+DATABASE_URL: process.env.DATABASE_URL
 }

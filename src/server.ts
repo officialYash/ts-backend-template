@@ -10,13 +10,13 @@ const server = app.listen(config.PORT)
 ;(async ()=>{ 
     try {
 //database Connection
-    const connection = await databaseService.connect()
-        logger.info(`DATABASE_CONNECTION`, {
-            meta:{
-                CONNECTION_NAME: connection.name
-            }
-        })
-        logger.info(`APPLICATION_STARTED`,{
+const connection = await databaseService.connect()
+logger.info(`DATABASE_CONNECTION`, {
+    meta: {
+        CONNECTION_NAME: connection.name
+    }
+})
+    logger.info(`APPLICATION_STARTED`,{
             meta:{
                 PORT:config.PORT,
                 SERVER_URL:config.SERVER_URL
